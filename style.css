@@ -1,0 +1,62 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: black;
+}
+
+.div1{
+    margin: 7em auto;
+    padding: 1em;
+    background-color: white;
+    width: 50%;
+    min-height: 20vh;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.div2{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+
+.btn1{
+    background-color: rgb(108, 163, 108);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    background-color: rgb(59, 141, 59);
+    transition: 1s;
+}
+
+.btnAns{
+    margin: 1.2em auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(108, 163, 108);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.btn2{
+    background-color: rgb(108, 163, 108);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn2:hover{
+    background-color: rgb(59, 141, 59);
+    transition: 1s;
+}

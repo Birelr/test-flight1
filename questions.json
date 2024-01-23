@@ -1,0 +1,51 @@
+{
+    "sorular": [
+      {
+        "metin": "Bu bir örnek soru mu?",
+        "cevaplar": [
+          {"secenek": "Evet", "dogru": true},
+          {"secenek": "Hayır", "dogru": false},
+          {"secenek": "Belki", "dogru": false},
+          {"secenek": "Bilmiyorum", "dogru": false}
+        ]
+      },
+      {
+        "metin": "Başka bir soru örneği?",
+        "cevaplar": [
+          {"secenek": "Evet", "dogru": false},
+          {"secenek": "Hayır", "dogru": true},
+          {"secenek": "Belki", "dogru": false},
+          {"secenek": "Bilmiyorum", "dogru": false}
+        ]
+      },
+      {
+        "metin": "soru örneği 3",
+        "cevaplar": [
+          {"secenek": "Evet", "dogru": true},
+          {"secenek": "Hayır", "dogru": false},
+          {"secenek": "Belki", "dogru": false},
+          {"secenek": "Bilmiyorum", "dogru": false}
+        ]
+      },
+      {
+        "metin": "4. soru örneği",
+        "cevaplar": [
+          {"secenek": "Evet", "dogru": true},
+          {"secenek": "Hayır", "dogru": false},
+          {"secenek": "Belki", "dogru": false},
+          {"secenek": "Bilmiyorum", "dogru": false}
+        ]
+      },
+      {
+        "metin": "5. soru örneği",
+        "cevaplar": [
+          {"secenek": "Evet", "dogru": true},
+          {"secenek": "Hayır", "dogru": false},
+          {"secenek": "Belki", "dogru": false},
+          {"secenek": "Bilmiyorum", "dogru": false}
+        ]
+      }
+    ]
+  }
+  
+  
