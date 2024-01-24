@@ -40,12 +40,17 @@ body{
     margin: 1.2em auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(108, 163, 108);
+    background-color: rgb(54, 55, 54);
     color: white;
     padding: 1em;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+.btnAns:hover{
+    background-color: rgb(124, 124, 124);
+    transition: 0.6s;
 }
 .btn2{
     background-color: rgb(108, 163, 108);
@@ -59,4 +64,7 @@ body{
 .btn2:hover{
     background-color: rgb(59, 141, 59);
     transition: 1s;
+}
+.hide{
+    display: none;
 }
