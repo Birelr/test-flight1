@@ -38,7 +38,7 @@ const questions = [
     
 ]
 
-let lastQuestion = questions.length-1;
+let lastQuestion = questions.length;
 let currQuestion =  0;
 let score = 0;
 
@@ -52,17 +52,20 @@ const answerBtns = document.querySelectorAll('.btnAns');
 const nextBtn = document.querySelector('.btn2');
 
 
-function startBtn(){
-    btnStart.classList.add('hide')
+
+function startBtn() {
+    btnStart.classList.add('hide');
     questionsElement.classList.remove('hide');
     answerBtns.forEach(btn => btn.classList.remove('hide'));
-    nextBtn.classList.remove('hide');
-    currQuestion = 0;
-    console.log(currQuestion)
-    setQuestions()
-};
+    nextBtn.classList.remove('hide'); 
+    setQuestions();
+}
+
+// Diğer fonksiyonlar aynı kalır
+
 
 function setQuestions() {
+    resetStat();
     let curQuestNo = currQuestion + 1;
     let currentQuestion = questions[currQuestion];
     questionsElement.innerHTML = curQuestNo + ". Soru: " + currentQuestion.question;
@@ -71,8 +74,55 @@ function setQuestions() {
         but1.innerText = answer.text
         but1.classList.add('btnAns')
         questionsElement.appendChild(but1);
-
+        if (answer.correct){
+            but1.dataset.correct = answer.correct;
+        }
+        but1.addEventListener('click', selectAnswer);
     }
         )
 };
+
+function resetStat() {
+    nextBtn.classList.add('hide');
+    while(questionsElement.firstChild){
+        questionsElement.removeChild(questionsElement.firstChild);
+    }
+};
+
+function handleNextButton() {
+    currQuestion++;
+    if (currQuestion < lastQuestion) {
+        setQuestions();
+    } else {
+        showScore();
+    }
+}
+
+
+
+function showScore() {
+    resetStat();
+    questionsElement.innerHTML = "Tebrikler! <br> Skorunuz: " + score + "/" + questions.length + " <br> Tekrar oynamak için sayfayı yenileyin.";
+}
+
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if (isCorrect) {
+        selectedBtn.classList.add("correct");
+        score++; 
+    } else {
+        selectedBtn.classList.add("wrong");
+    }
+
+    Array.from(questionsElement.children).forEach(btn => {
+        if (btn.dataset.correct) {
+            btn.classList.add('correct');
+        }
+        btn.disabled = true;
+    });
+    nextBtn.classList.remove('hide');
+    nextBtn.addEventListener('click', handleNextButton);
+}
+
 
