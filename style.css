@@ -48,10 +48,12 @@ body{
     cursor: pointer;
 }
 
-.btnAns:hover{
+.hoverEffect:hover{
     background-color: rgb(124, 124, 124);
     transition: 0.5s;
 }
+
+
 .btn2{
     background-color: rgb(54, 55, 54);
     color: white;

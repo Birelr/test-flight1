@@ -216,7 +216,7 @@ function setQuestions() {
     currentQuestion.answers.forEach( answer => {
         let but1 = document.createElement('button')
         but1.innerText = answer.text
-        but1.classList.add('btnAns')
+        but1.classList.add('btnAns', 'hoverEffect')
         questionsElement.appendChild(but1);
         if (answer.correct){
             but1.dataset.correct = answer.correct;
@@ -254,9 +254,11 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
+        selectedBtn.classList.remove("hoverEffect");
         score++; 
     } else {
         selectedBtn.classList.add("wrong");
+        selectedBtn.classList.remove("hoverEffect");
     }
 
     Array.from(questionsElement.children).forEach(btn => {
