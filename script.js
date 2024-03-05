@@ -212,7 +212,7 @@ function setQuestions() {
     resetStat();
     let curQuestNo = currQuestion + 1;
     let currentQuestion = questions[currQuestion];
-    questionsElement.innerHTML = curQuestNo + ". Soru: " + currentQuestion.question;
+    questionsElement.innerHTML = curQuestNo + " / " + lastQuestion + "<br>" + curQuestNo + ". Soru: " + currentQuestion.question; 
     currentQuestion.answers.forEach( answer => {
         let but1 = document.createElement('button')
         but1.innerText = answer.text
